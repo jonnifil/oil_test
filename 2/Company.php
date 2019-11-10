@@ -127,7 +127,7 @@ class Company extends ActiveRecordWithActive
      */
     public function getComments()
     {
-        $this->hasMany(Comment::className(), ['entityId' => 'id'])->where(['model' => 'Company']);
+        return $this->hasMany(Comment::className(), ['entityId' => 'id'])->where(['model' => 'Company']);
     }
 
 }
